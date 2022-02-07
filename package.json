@@ -74,7 +74,7 @@
     "test:types": "tsc --noEmit && tsc --project ./test/tsconfig.json --noEmit",
     "watch": "yarn build:cjs --watch",
     "watch:types": "yarn build:types --watch",
-    "postinstall": "npx tsc --emitDeclarationOnly --declarationMap --outDir ./lib"
+    "postinstall": "npx tsc --emitDeclarationOnly --declarationMap --outDir ./lib && npx rollup --config ./config/rollup.js && npx rollup --config ./config/rollup-cjs.js && npx rollup --config ./config/rollup-umd.js && npx rollup --config ./config/rollup-umd-min.js"
   },
   "keywords": [
     "api",
