@@ -74,7 +74,7 @@
     "test:types": "tsc --noEmit && tsc --project ./test/tsconfig.json --noEmit",
     "watch": "yarn build:cjs --watch",
     "watch:types": "yarn build:types --watch",
-    "postinstall": "yarn build"
+    "postinstall": "npx tsc --emitDeclarationOnly --declarationMap --outDir ./lib"
   },
   "keywords": [
     "api",
